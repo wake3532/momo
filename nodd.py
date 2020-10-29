@@ -65,12 +65,12 @@ async def on_member_remove(member):
 
 @client.event
 async def on_message(message):
-    if(message.content.split(" ")[0] == "momo!mute):
+    if(message.content.split(" ")[0] == "momo!mute")
         if(message.author.guild_permissions.manage_channels)
         try:
             user = message.guild.get_member(int(message.content.split(' ')[1][3:21]))
             await message.guild.get_channel(message.channel.category_id).set_permissions(user, send_messages=False)
-            await message.channel.send('https://images-ext-1.discordapp.net/external/CfaCNR-TOg2NMLXdBhw5PqQ9ijpDIwbvz2nTrLspHSU/%3Fwidth%3D724%26height%3D407/https/media.discordapp.net/attachments/771114908389605446/771345493707194378/1478174300_eyJ1cmwiOiJodHRwOi8vaS5pbWd1ci5jb20vVEM5V3JvZC5naWYifQ.gif')
+            await message.channel.send('https://images-ext-1.discordapp.net/external/CfaCNR-TOg2NMLXdBhw5PqQ9ijpDIwbvz2nTrLspHSU/%3Fwidth%3D724%26height%3D407/https/media.discordapp.net/attachments/771114908389605446/771345493707194378/1478174300_eyJ1cmwiOiJodHRwOi8vaS5pbWd1ci5jb20vVEM5V3JvZC5naWYifQ.gif%27%22)
         except Exception as e:
             await message.channel.send(embed=discord.Embed(title="에러 발생", description = str(e), color = 0xff0000))
             return
