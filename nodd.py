@@ -65,8 +65,8 @@ async def on_member_remove(member):
 
 @client.event
 async def on_message(message):
-    if(message.content.split(" ")[0] == "momo!mute)
-        if(message.author.guild_permissions.manage_channels):
+    if(message.content.split(" ")[0] == "momo!mute):
+        if(message.author.guild_permissions.manage_channels)
         try:
             user = message.guild.get_member(int(message.content.split(' ')[1][3:21]))
             await message.guild.get_channel(message.channel.category_id).set_permissions(user, send_messages=False)
