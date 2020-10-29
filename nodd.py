@@ -63,6 +63,8 @@ async def on_member_remove(member):
     except:
         return None
 
+@client.event
+async def on_message(message):
     if(message.content.split(" ")[0] == "momo!mute):
         if(message.author.guild_permissions.manage_channels):
         try:
@@ -75,6 +77,7 @@ async def on_member_remove(member):
     else:
         await message.channel.send(embed=discord.Embed(title="권한 부족", description = message.author.mention + "님은 뮤트를 할 수 없네요. 관리자에게 물어보시겠어요 ? ", color = 0xff0000))
         return
+
 
     if (message.content.split(" ")[0] == "momo!ban"):
         if (message.author.guild_permissions.ban_members):
