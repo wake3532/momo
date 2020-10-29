@@ -30,7 +30,7 @@ async def on_ready():
     while True:
         user = len(client.users)
         server = len(client.guilds)
-        messages = ["제 접두사는 * 입니다!", "∑」FOR#1234님이 제작했어요!" , "TEAM MB" , str(user) + "분이 제 봇을 이용중입니다.", str(server) + "개의 서버에 있습니다."]
+        messages = ["BOT HOSTING : FINE ", " ERROR : 없음 " , " 이 봇은 개인적인 봇 입니다. 가져가실 수 없습니다. " , str(user) + "분이 우리 서버에 가입중! .", str(server) + "부스트!"]
         for (m) in range(5):
             await client.change_presence(status=discord.Status.dnd, activity=discord.Activity(name=messages[(m)], type=discord.ActivityType.watching))
             await asyncio.sleep(4)
